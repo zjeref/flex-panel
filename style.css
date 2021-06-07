@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Architects Daughter", cursive;
+}
+
+.container {
+  width: 100%;
+}
+
+.panels {
+  min-height: 100vh;
+  display: flex;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 40px;
+  border: 2px solid black;
+  flex: 1;
+  transition: flex 0.7s cubic-bezier(0.61, 0.19, 0.7, -0.11),
+    font-size 0.4s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.panel > * {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 9px 6px 11px #2e2929;
+  transition: transform 0.2s cubic-bezier(0.61, 0.19, 0.7, -0.11);
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel.active > *:first-child {
+  transform: translateY(0);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel.active > *:last-child {
+  transform: translateY(0);
+}
+
+.open {
+  flex: 5;
+  font-size: 60px;
+}
+
+.panel1 {
+  background-image: url(./image/s1.jpg);
+}
+
+.panel2 {
+  background-image: url(./image/s2.jpg);
+}
+
+.panel3 {
+  background-image: url(./image/s3.jpg);
+}
+
+.panel4 {
+  background-image: url(./image/s4.jpg);
+}
+
+.panel5 {
+  background-image: url(./image/s5.jpg);
+}
